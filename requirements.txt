@@ -1,5 +1,4 @@
 Flask
-json
 bs4 
 flask_cors 
 time 
