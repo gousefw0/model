@@ -1,0 +1,8 @@
+flask 
+json
+bs4 
+flask_cors 
+time 
+numpy 
+pandas 
+statsmodels
