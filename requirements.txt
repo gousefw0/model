@@ -1,4 +1,4 @@
-flask 
+flask 23.1.2
 json
 bs4 
 flask_cors 
@@ -6,3 +6,4 @@ time
 numpy 
 pandas 
 statsmodels
+
