@@ -35,14 +35,14 @@ def helper_func(stock,a):
     data=pd.DataFrame(dic)
     data['datetime'] = pd.to_datetime(data['datetime'])
     data = data.set_index('datetime')
-    X = data['Close'].values
-    history = [x for x in X]
+    #X = data['Close'].values
+    #history = [x for x in X]
     predictions = []
     # walk-forward validation
     import statsmodels.api as sm
-    model = ARIMA(history, order=((6,1,8)))
+    model = ARIMA( data['Close'], order=((6,2,8)))
     model_fit = model.fit()
-    output = model_fit.forecast(steps=a)
+    output = model_fit.forecast(30)
     res=[]
     for i in output:
          res.append(i)
