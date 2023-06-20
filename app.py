@@ -40,7 +40,7 @@ def helper_func(stock,a):
     predictions = []
     # walk-forward validation
     import statsmodels.api as sm
-    model = ARIMA(history, order=((6,2,8)))
+    model = ARIMA(history, order=((1,1,0)))
     model_fit = model.fit()
     output = model_fit.forecast(steps=a)
     res=[]
