@@ -42,7 +42,7 @@ def helper_func(stock,a):
     import statsmodels.api as sm
     model = ARIMA( data['Close'], order=((1,2,1)))
     model_fit = model.fit()
-    output = model_fit.forecast(30)
+    output = model_fit.forecast(a)
     res=[]
     for i in output:
          res.append(i)
